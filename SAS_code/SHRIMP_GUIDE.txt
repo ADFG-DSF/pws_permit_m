@@ -1,0 +1,46 @@
+All permit analysis code/files are located at
+O:\DSF\RTS\common\Pat\Permits
+
+Prince William Sound Shrimp
+Primary Contact/Biologist: Jay Baumer
+
+Raw Data:
+pwspmc_2020 - this is a file containing all registers permits
+pwshvc_2020 - this is the file containing all harvest records
+These files get sent to you via email from a database manager.
+
+
+Permit response codes: 
+0 - responded before any reminder
+1 responded after 1st reminder
+2 responded after 2nd reminder
+9 never responded
+
+Goal: Determine how much shrimp was harvested using people who responded after 
+the 2nd reminder as represenative of the non-respondants
+
+*************************
+Running the estimates script might not be needed, compare with harvest as it is very similar
+*************************
+
+SAS Files:
+Run "Permits" File first -- Creats permit summary
+Run "Harvest" second -- summarizes reported harvest
+Run "Estimates" third --- estimates the total harvest which includes estimates of non-respondant harvests
+
+
+Stat Area Problems:
+
+Each year Jay Baumer goes through the reported stat areas and corrects them. Usually there are quite a few errors.
+He will send you a file with the correct stat areas.
+I believe this file has the correct stat area for each observation,
+so you can replace the original reported stat areas with the corrected ones. (no error matching/replacement)
+
+All SAS scripts output their summaries to a "Shrimp Permits 20XX" files, which is the final document
+to be sent back to Jay Baumer.
+
+To do a new analysis:
+
+Copy Permits, Harvest, and Estimates scripts to new folder. Add the raw data files to the folder.
+Change the file locations and years in the scripts, and then run. Some years the raw data format
+changes, and thats the only time the code needs to be adapted.
