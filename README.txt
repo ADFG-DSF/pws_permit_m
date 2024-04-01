@@ -28,4 +28,4 @@ All that should be needed to run these programs is to adjust the "year" variable
 each script and all of the required input data sets that follow the naming convention outlined above.
 
 Version control: to ensure changes are traceable, any adjustments made to the R scripts should be saved
-as a new version.  
+as a new version.    
